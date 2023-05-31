@@ -1,0 +1,39 @@
+What's new in this variant of wmtemp
+------------------------------------
+
+This variant of wmtemp utility is specifically tailored for Intel Core i5-based
+HP Pavillion range of laptops. The issue with vanilla "wmtemp" utility is that
+it reads and displays wrong temperature parameters on these laptops. This
+variant makes use of "coretemp-isa-0000" chip and displays temperatures for both
+the cores - Core 0 and Core 1.
+
+Now, vanilla README follows...
+
+Make sure lm_sensors is installed, it will not work without it.
+
+You might want to take a look at the Makefile to change an include path or
+library path.
+
+* Install with the following commands:
+
+    make
+    su
+    make install
+
+
+The default install path is /usr/local/bin, if you do not want this, use
+
+    make DEST=/to/another/path install
+
+to install wmtemp to /to/an/other/path.
+
+To install the manual page to another location (default is
+/usr/local/share/man/man1), use:
+
+    make MAN=/to/another/path install
+
+Or combine the above :).
+
+* Check out `wmtemp --help` for options.
+
+* See the file COPYING for license information

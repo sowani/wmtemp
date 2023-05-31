@@ -1,0 +1,19 @@
+* Main Author:
+Peter Gnodde <peter@gnodde.org>
+
+* Bug and patches reports:
+Jean Delvare (http://www.ensicaen.ismra.fr/~delvare/)
+Riccardo Stagni <unriccio@email.it>
+
+* Manual page
+Lars Steinke <lss@debian.org>
+
+Based largely on work on WMMemLoad and WMMemMon and WMCPULoad done by:
+Mark Staggs <me@markstaggs.net> (WMMemLoad)
+Seiichi SATO <ssato@sh.rim.or.jp> (The other two)
+
+* HP Pavillion port:
+Atul Sowani <sowani@gmail.com>
+
+* HP Pavillion port bug reports:
+Atul Sowani <sowani@gmail.com>
