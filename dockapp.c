@@ -78,12 +78,13 @@ dockapp_open_window(char *display_specified, char *appname,
 	wh = h;
     }
 
+	int x = 1861, y = 982;
     /* Create Windows */
     icon_window = XCreateSimpleWindow(display, root, 0, 0, ww, wh, 0, 0, 0);
     if (dockapp_isbrokenwm) {
-	window = XCreateSimpleWindow(display, root, 0, 0, ww, wh, 0, 0, 0);
+	window = XCreateSimpleWindow(display, root, x, y, ww, wh, 0, 0, 0);
     } else {
-	window = XCreateSimpleWindow(display, root, 0, 0, 1, 1, 0, 0, 0);
+	window = XCreateSimpleWindow(display, root, x, y, 1, 1, 0, 0, 0);
     }
 
     /* Set ClassHint */
@@ -127,9 +128,11 @@ dockapp_open_window(char *display_specified, char *appname,
 	sizehints.min_width = sizehints.max_width = WINDOWED_SIZE_W;
 	sizehints.min_height = sizehints.max_height = WINDOWED_SIZE_H;
     }
+	sizehints.x = x;  sizehints.y = y;
     sizehints.width = ww;
     sizehints.height = wh;
     XSetWMNormalHints(display, icon_window, &sizehints);
+    XSetWMNormalHints(display, window, &sizehints);
 
     /* Set WindowTitle for AfterStep Wharf */
     stat = XStringListToTextProperty(&appname, 1, &title);
