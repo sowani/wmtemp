@@ -2,7 +2,7 @@
 #define SHO_TEMP_H
 
 #define PACKAGE		"wmtemp"
-#define VERSION		"0.0.4"
+#define VERSION		"0.0.7"
 
 #define TO_FAHRENHEIT(t)		(((double)(t) * 1.8) + 32.0)
 #define TO_KELVIN(t)			((double)(t) + 273.0)
